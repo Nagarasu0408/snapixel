@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:snapixel/Pages/screens/ExtraScreens/IntroScreen1.dart';
+import 'package:snapixel/Pages/screens/ExtraScreens/IntroScreen2.dart';
+import 'package:snapixel/Pages/screens/ExtraScreens/IntroScreen3.dart';
 
 import '../LoginPage.dart';
 
@@ -28,15 +31,9 @@ class _MainScreenState extends State<MainScreen> {
               });
             },
             children: [
-              Container(
-                color: Colors.pink,
-              ),
-              Container(
-                color: Colors.amber,
-              ),
-              Container(
-                color: Colors.deepPurple,
-              ),
+              Intro1(),
+              Intro2(),
+              Intro3(),
             ],
           ),
           Container(
@@ -47,31 +44,38 @@ class _MainScreenState extends State<MainScreen> {
               children: [
                 _EndPage
                     ? GestureDetector(
-                        child:const Icon(
+                        child: const Icon(
                           Icons.arrow_back_outlined,
                         ),
                         onTap: () => pageController.previousPage(
-                            duration:const Duration(microseconds: 100),
+                            duration: const Duration(microseconds: 100),
                             curve: Curves.bounceIn),
-                )
+                      )
                     : GestureDetector(
                         child: Text("skip"),
-                        onTap: () => pageController.jumpToPage(2),),
-                 SmoothPageIndicator(
-                   controller: pageController,
-                   count: 3,
-                 ),
-                _EndPage?GestureDetector(
-                  child:Text('Done'),
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()),);
-                  },
-                ):GestureDetector(
-                  child: const Icon(Icons.arrow_forward),
-                  onTap: () => pageController.nextPage(
-                      duration:const  Duration(microseconds: 100),
-                      curve: Curves.bounceIn),
+                        onTap: () => pageController.jumpToPage(2),
+                      ),
+                SmoothPageIndicator(
+                  controller: pageController,
+                  count: 3,
                 ),
+                _EndPage
+                    ? GestureDetector(
+                        child: Text('Done'),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()),
+                          );
+                        },
+                      )
+                    : GestureDetector(
+                        child: const Icon(Icons.arrow_forward),
+                        onTap: () => pageController.nextPage(
+                            duration: const Duration(microseconds: 100),
+                            curve: Curves.bounceIn),
+                      ),
               ],
             ),
           ),

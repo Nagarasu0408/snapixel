@@ -8,9 +8,10 @@ class CustomTextFiled extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(20),
+      padding: EdgeInsets.symmetric(horizontal: 10),
       alignment: Alignment.center,
       height: 50,
-      decoration: BoxDecoration(border: Border.all(color:Colors.black),borderRadius: BorderRadius.circular(20)),
+      decoration: BoxDecoration(border: Border.all(color:Colors.black),borderRadius: BorderRadius.circular(10)),
       child: TextField(
         obscureText: obscureText,
         decoration: InputDecoration(
