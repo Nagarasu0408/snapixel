@@ -13,6 +13,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   void Login(context) {
+    print("clicked");
     Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
   }
 
