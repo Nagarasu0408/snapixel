@@ -20,8 +20,8 @@ class GalleryImage extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                        image: NetworkImage(
-                            "https://smartphotography.in/wp-content/uploads/2022/02/SWPA-national-award-winner.jpg"),
+                        image: AssetImage(
+                            "assets/IntroScreen_Image/GalleryImage/Image1.jpg"),
                         fit: BoxFit.cover)),
               ),
               const SizedBox(
@@ -37,8 +37,8 @@ class GalleryImage extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
-                            image: NetworkImage(
-                                "https://www.all-about-photo.com/images/articles/ART-969-2.jpg"),
+                            image:  AssetImage(
+                                "assets/IntroScreen_Image/GalleryImage/Image2.jpg"),
                             fit: BoxFit.cover)),
                   ),
                   const SizedBox(
@@ -50,8 +50,8 @@ class GalleryImage extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
-                            image: NetworkImage(
-                                "https://experimentwithnature.com/wp-content/uploads/2012/02/earth3.jpg"),
+                            image:  AssetImage(
+                                "assets/IntroScreen_Image/GalleryImage/Image3.jpg"),
                             fit: BoxFit.cover)),
                   ),
                 ],
@@ -71,8 +71,8 @@ class GalleryImage extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                        image: NetworkImage(
-                            "https://photographyhero.com/wp-content/uploads/2017/08/space-001.jpg"),
+                        image:  AssetImage(
+                            "assets/IntroScreen_Image/GalleryImage/Image4.jpg"),
                         fit: BoxFit.cover)),
               ),
               const SizedBox(
@@ -84,8 +84,8 @@ class GalleryImage extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     image: const DecorationImage(
-                        image: NetworkImage(
-                            "https://iso.500px.com/wp-content/uploads/2015/05/fuego1_cover.jpg"),
+                        image: AssetImage(
+                            "assets/IntroScreen_Image/GalleryImage/Image5.jpg"),
                         fit: BoxFit.cover)),
               ),
               const SizedBox(
@@ -97,8 +97,8 @@ class GalleryImage extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: NetworkImage(
-                          "https://www.nativeplanet.com/img/2018/08/landscapebeautiful-1533110307.jpg"),
+                      image: AssetImage(
+                          "assets/IntroScreen_Image/GalleryImage/Image6.webp"),
                       fit: BoxFit.cover),
                 ),
               ),
