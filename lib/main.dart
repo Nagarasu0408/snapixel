@@ -1,5 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:snapixel/Pages/LoginPage.dart';
+import 'package:snapixel/Pages/RegisterPage.dart';
 import 'package:snapixel/Pages/screens/MainIntroScreen.dart';
 
 void main(){
@@ -21,7 +23,7 @@ class _QpixelState extends State<Qpixel> {
         splashIconSize: 150,
         splashTransition: SplashTransition.fadeTransition,
         centered: true,
-        nextScreen: MainScreen());
+        nextScreen: LoginPage());
   }
 }
 
