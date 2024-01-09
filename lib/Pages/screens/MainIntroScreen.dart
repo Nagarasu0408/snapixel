@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:snapixel/Pages/screens/ExtraScreens/IntroScreen1.dart';
 import 'package:snapixel/Pages/screens/ExtraScreens/IntroScreen2.dart';
@@ -8,7 +7,7 @@ import 'package:snapixel/Pages/screens/ExtraScreens/IntroScreen3.dart';
 import '../LoginPage.dart';
 
 class MainScreen extends StatefulWidget {
-  MainScreen({super.key});
+  const MainScreen({super.key});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -17,6 +16,10 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   PageController pageController = PageController();
   var _EndPage = false;
+  var _FirstPage = false;
+  void Login(context){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,54 +30,77 @@ class _MainScreenState extends State<MainScreen> {
             controller: pageController,
             onPageChanged: (index) {
               setState(() {
+                _FirstPage = (index == 1);
                 _EndPage = (index == 2);
               });
             },
-            children: [
+            children: const [
               Intro1(),
               Intro2(),
               Intro3(),
             ],
           ),
           Container(
-            alignment: const Alignment(0, 0.7),
+            alignment: const Alignment(0, 0.8),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _EndPage
-                    ? GestureDetector(
-                        child: const Icon(
-                          Icons.arrow_back_outlined,
+                _FirstPage || _EndPage
+                    ? Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.blue.shade50),
+                        child: GestureDetector(
+                          child: const Icon(
+                            Icons.arrow_back_outlined,
+                            size: 30,
+                          ),
+                          onTap: () => pageController.previousPage(
+                              duration: const Duration(microseconds: 100),
+                              curve: Curves.bounceIn),
                         ),
-                        onTap: () => pageController.previousPage(
-                            duration: const Duration(microseconds: 100),
-                            curve: Curves.bounceIn),
                       )
-                    : GestureDetector(
-                        child: Text("skip"),
-                        onTap: () => pageController.jumpToPage(2),
+                    : Container(
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.blue.shade50),
+                        child: GestureDetector(
+                          child: Text('Skip'),
+                          onTap: () => pageController.jumpToPage(3),
+                        ),
                       ),
                 SmoothPageIndicator(
                   controller: pageController,
                   count: 3,
                 ),
                 _EndPage
-                    ? GestureDetector(
-                        child: Text('Done'),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => LoginPage()),
-                          );
-                        },
+                    ? Container(
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.blue.shade50),
+                        child: GestureDetector(
+                          onTap: ()=>Login(context),
+                          child: const Text('Join'),
+                        ),
                       )
-                    : GestureDetector(
-                        child: const Icon(Icons.arrow_forward),
-                        onTap: () => pageController.nextPage(
-                            duration: const Duration(microseconds: 100),
-                            curve: Curves.bounceIn),
+                    : Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.blue.shade50),
+                        child: GestureDetector(
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            size: 30,
+                          ),
+                          onTap: () => pageController.nextPage(
+                              duration: const Duration(microseconds: 100),
+                              curve: Curves.bounceIn),
+                        ),
                       ),
               ],
             ),
