@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                 CustomTextFiled(hintText: "Password", obscureText: true),
                 Padding(
                   padding: const EdgeInsets.only(top: 30.0),
-                  child: Center(child: CustomButton(buttonName: "Continue")),
+                  child: Center(child: CustomButton(buttonName: "Continue",)),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
