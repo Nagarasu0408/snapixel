@@ -166,7 +166,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 CustomTextFiled(hintText: "Confirm Password", obscureText: true),
                 Padding(
                   padding: const EdgeInsets.only(top: 30.0),
-                  child: Center(child: CustomButton(buttonName: "Continue")),
+                  child: Center(child: CustomButton(buttonName: "Continue", onTap: () {  },)),
                 ),
               ],
             ),
