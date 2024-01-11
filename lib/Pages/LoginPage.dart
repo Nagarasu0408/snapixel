@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Home.dart';
+import 'package:snapixel/Pages/Index.dart';
+
 import 'RegisterPage.dart';
 import 'package:snapixel/Components/custom_TextFiled.dart';
 import 'package:snapixel/Components/custom_button.dart';
@@ -14,7 +15,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   void Login(context) {
     print("clicked");
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigation()));
   }
 
   @override

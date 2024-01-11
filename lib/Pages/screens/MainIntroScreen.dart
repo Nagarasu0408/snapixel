@@ -41,7 +41,7 @@ class _MainScreenState extends State<MainScreen> {
             ],
           ),
           Container(
-            alignment: const Alignment(0, 0.8),
+            alignment: const Alignment(0, 0.9),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,

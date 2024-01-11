@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:snapixel/Components/PopularUsers.dart';
 
 import '../Components/Discovers.dart';
-import '../Components/hashTag.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,28 +13,13 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return   Scaffold(
-      body:const SingleChildScrollView(
+    return const  Scaffold(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 100,),
-            Stack(
-                children:[ SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      HashTag(),
-                      HashTag(),
-                      HashTag(),
-                      HashTag(),
-                      HashTag(),
-                    ],
-                  ),
-                ),
-                ]
-            ),
+            SizedBox(height: 0,),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -63,23 +46,6 @@ class _HomeState extends State<Home> {
             ),
             Discover(imageUrl: 'https://s.studiobinder.com/wp-content/uploads/2021/02/Creative-Photography-Ideas-Techniques-To-Get-You-Inspired-StudioBinder.jpeg'),
             Discover(imageUrl: 'https://wildlifesos.org/wp-content/uploads/2023/06/IMG_5193-1920x900.jpg'),
-
-          ],
-        ),
-      ),
-      bottomNavigationBar:Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
-        child: GNav(
-          padding: const EdgeInsets.all(20),
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          activeColor: Colors.black,
-          gap: 10,
-          tabBackgroundColor: Colors.blue.shade50,
-          tabs: const [
-            GButton(icon:Icons.home_outlined,text: 'Home',),
-            GButton(icon:Icons.search_outlined,text: 'Search',),
-            GButton(icon:Icons.local_fire_department_outlined,text: 'Feed',),
-            GButton(icon:Icons.person_3_outlined,text: 'Profile',),
           ],
         ),
       ),
