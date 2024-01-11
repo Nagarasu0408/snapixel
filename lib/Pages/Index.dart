@@ -19,7 +19,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   final screens = [
     Home(),
     Search(),
-    Trends(),
+    Trending(),
     Profile(),
   ];
 

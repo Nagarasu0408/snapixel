@@ -27,8 +27,8 @@ class _QpixelState extends State<Qpixel> {
       splashIconSize: 150,
       splashTransition: SplashTransition.fadeTransition,
       centered: true,
-      // nextScreen: const MainScreen(),
-      nextScreen:const MyApp(),
+      nextScreen: const MainScreen(),
+      // nextScreen:const MyApp(),'
       // nextScreen: MyApp2(),
       // nextScreen: Trends(),
     );
