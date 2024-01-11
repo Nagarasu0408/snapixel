@@ -347,7 +347,7 @@ class _TrendingState extends State<Trending> {
             child: const Center(
               child: Icon(
                 Icons.favorite,
-                color: Colors.blue,
+                color: Colors.white,
                 size: 100.0, // Adjust the size as needed
               ),
             ),
