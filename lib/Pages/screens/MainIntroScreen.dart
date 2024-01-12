@@ -24,6 +24,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white.withOpacity(.1),
       body: Stack(
         children: [
           PageView(
@@ -38,6 +39,7 @@ class _MainScreenState extends State<MainScreen> {
               Intro1(),
               Intro2(),
               Intro3(),
+              // Intro4()
             ],
           ),
           Container(
@@ -51,7 +53,7 @@ class _MainScreenState extends State<MainScreen> {
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.blue.shade50),
+                            color: Colors.orange.shade200),
                         child: GestureDetector(
                           child: const Icon(
                             Icons.arrow_back_outlined,
@@ -66,7 +68,7 @@ class _MainScreenState extends State<MainScreen> {
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.blue.shade50),
+                            color: Colors.orange.shade200),
                         child: GestureDetector(
                           child: Text('Skip'),
                           onTap: () => pageController.jumpToPage(3),
@@ -81,7 +83,7 @@ class _MainScreenState extends State<MainScreen> {
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.blue.shade50),
+                            color: Colors.orange.shade200),
                         child: GestureDetector(
                           onTap: ()=>Login(context),
                           child: const Text('Join'),
@@ -91,7 +93,7 @@ class _MainScreenState extends State<MainScreen> {
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
-                            color: Colors.blue.shade50),
+                            color: Colors.orange.shade200),
                         child: GestureDetector(
                           child: const Icon(
                             Icons.arrow_forward,

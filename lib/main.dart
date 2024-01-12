@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:snapixel/Demo/dmeo.dart';
 import 'package:snapixel/Demo/share.dart';
 import 'package:snapixel/Pages/Trends.dart';
+import 'package:snapixel/Pages/UserProfile.dart';
 import 'package:snapixel/Pages/screens/MainIntroScreen.dart';
 
 void main() {
@@ -27,6 +28,7 @@ class _QpixelState extends State<Qpixel> {
       splashIconSize: 150,
       splashTransition: SplashTransition.fadeTransition,
       centered: true,
+      // nextScreen: UserProfile(),
       nextScreen: const MainScreen(),
       // nextScreen:const MyApp(),'
       // nextScreen: MyApp2(),

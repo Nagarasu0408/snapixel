@@ -446,7 +446,7 @@ class _TrendingState extends State<Trending> {
             ),
           ),
           Opacity(
-            opacity: item.isLiked ? 0 : 0,
+            opacity: item.isLiked ? 1 : 0,
             child: const Center(
               child: Icon(
                 Icons.favorite,

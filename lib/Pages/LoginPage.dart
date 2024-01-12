@@ -39,13 +39,14 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
       child: Container(
+        alignment: Alignment(0,0),
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.center,
             end: Alignment.bottomCenter,
             colors: [
-              Colors.black12,
-              Colors.black12,
+              Colors.black45,
+              Colors.black45,
             ],
           ),
         ),
@@ -53,8 +54,10 @@ class _LoginPageState extends State<LoginPage> {
           backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
             child: Container(
+
+              alignment: Alignment(0,0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(20),
                 color: Colors.white,
                 boxShadow: const [
                   BoxShadow(
@@ -63,29 +66,22 @@ class _LoginPageState extends State<LoginPage> {
                   )
                 ],
               ),
-              height: 700,
-              margin: const EdgeInsets.only(
-                left: 20,
-                top: 100,
-                right: 20,
-                bottom: 40,
-              ),
+              margin:const EdgeInsets.symmetric(horizontal: 15,vertical:100),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 260.0),
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/logo1.png"),
-                          ),
+                    Container(
+                      height: 70,
+                      width: 130,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/logo1.png"),fit: BoxFit.cover
                         ),
-                        height: 100,
                       ),
                     ),
+                    const SizedBox(height: 20,),
                     const Text(
                       'Sign in',
                       style: TextStyle(
@@ -139,7 +135,7 @@ class _LoginPageState extends State<LoginPage> {
                         hintText: "Password", obscureText: true),
                      GestureDetector(
                        onTap: ()=>goToHome(context),
-                       child: Padding(
+                       child:const Padding(
                         padding: EdgeInsets.only(top: 40.0),
                         child: Center(
                             child: CustomButton(
@@ -156,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  height: 1,
+                                  height: .6,
                                   width: 140,
                                   color: Colors.black26,
                                 ),
@@ -166,68 +162,54 @@ class _LoginPageState extends State<LoginPage> {
                                   child: Text(
                                     'Or',
                                     style: TextStyle(
-                                      color: Colors.black26,
+                                      color: Colors.black54,
                                     ),
                                   ),
                                 ),
                                 Container(
-                                  height: 1,
+                                  height: .6,
                                   width: 140,
                                   color: Colors.black26,
                                 ),
                               ],
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 72.0),
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding:
-                                    const EdgeInsets.only(top: 40.0, right: 15.0),
-                                    child: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Image.asset(
-                                            "assets/google-icon-svgrepo-com.png"),
-                                      ),
-                                      height: 50,
-                                      decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(100),
-                                          border: Border.all(color: Colors.black26)),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding:
-                                    const EdgeInsets.only(top: 40.0, right: 15.0),
-                                    child: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Image.asset(
-                                            "assets/apple-173-svgrepo-com.png"),
-                                      ),
-                                      height: 50,
-                                      decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(100),
-                                          border: Border.all(color: Colors.black26)),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 40.0),
-                                    child: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Image.asset(
-                                            "assets/facebook-color-svgrepo-com.png"),
-                                      ),
-                                      height: 50,
-                                      decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(100),
-                                          border: Border.all(color: Colors.black26)),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                            const SizedBox(height: 20,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  padding:const  EdgeInsets.all(10.0),
+                                  child: Image.asset(
+                                      "assets/google-icon-svgrepo-com.png"),
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      border: Border.all(color: Colors.black26)),
+                                ),
+                                const SizedBox(width: 10,),
+                                Container(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Image.asset(
+                                      "assets/apple-173-svgrepo-com.png"),
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      border: Border.all(color: Colors.black26)),
+                                ),
+                                const SizedBox(width: 10,),
+                                Container(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Image.asset(
+                                      "assets/facebook-color-svgrepo-com.png"),
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      border: Border.all(color: Colors.black26)),
+                                ),
+                              ],
                             ),
+                            const SizedBox(height: 20,),
                           ],
                         ),
                       ),
