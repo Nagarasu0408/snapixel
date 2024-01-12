@@ -24,7 +24,14 @@ class _QpixelState extends State<Qpixel> {
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      splash: 'assets/logo1.png',
+      backgroundColor: Colors.white.withOpacity(0.1),
+      splash:ColorFiltered(
+        colorFilter:const  ColorFilter.mode(
+          Colors.white,
+          BlendMode.srcIn,
+        ),
+        child: Image.asset('assets/logo1.png'),
+      ),
       splashIconSize: 150,
       splashTransition: SplashTransition.fadeTransition,
       centered: true,
