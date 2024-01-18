@@ -31,7 +31,7 @@ class Intro1 extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 25,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -50,10 +50,9 @@ class Intro1 extends StatelessWidget {
                   width: 10,
                 ),
                 const SizedBox(
-                  height: 80,
                   width: 300,
                   child: Text(
-                    'QPixel allows every users to upload their high quality photographs and let them to create their own library.',
+                    'Expolre amazing Contests created by other users.',
                     style: TextStyle(
                         fontSize: 14,
                         fontFamily: 'Assistant',
@@ -82,10 +81,9 @@ class Intro1 extends StatelessWidget {
                   width: 10,
                 ),
                 const SizedBox(
-                  height: 80,
                   width: 300,
                   child: Text(
-                    'Every masterpiece of the creators will be considered to be displayed in the user library in front of the world.',
+                    'Create your own customized contest, define the rules and target a specific community',
                     style: TextStyle(
                         fontSize: 14,
                         fontFamily: 'Assistant',

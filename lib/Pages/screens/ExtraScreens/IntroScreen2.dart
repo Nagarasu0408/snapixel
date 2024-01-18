@@ -17,11 +17,11 @@ class Intro2 extends StatelessWidget {
             height: 50,
           ),
           Align(
-            alignment: Alignment.bottomLeft,
+            alignment: Alignment.center,
             child: Padding(
               padding: const EdgeInsets.only(left: 20.0),
               child: Text(
-                "Compete with the world",
+                "Post & Vote",
                 style: TextStyle(
                     fontSize: 23,
                     color: Colors.orange.shade200,
@@ -30,7 +30,7 @@ class Intro2 extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 15,
+            height: 25,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -49,10 +49,9 @@ class Intro2 extends StatelessWidget {
                   width: 10,
                 ),
                 const SizedBox(
-                  height: 110,
                   width: 300,
                   child: Text(
-                    'Any creators can participate in the monthly contest hosted in QPixel and the credits will be given based on their ratings.',
+                    'Post high quality content to showcase your talent and build your fanbase.',
                     style: TextStyle(
                         fontSize: 14,
                         color: Colors.white,
@@ -64,6 +63,7 @@ class Intro2 extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 20,),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Row(
@@ -81,10 +81,9 @@ class Intro2 extends StatelessWidget {
                   width: 10,
                 ),
                 const SizedBox(
-                  height: 110,
                   width: 300,
                   child: Text(
-                    'The ratings for a creator can be determined by the number of votes that a photograph got by all other users globally.',
+                    'Vote for your favourite user and show your support.',
                     style: TextStyle(
                         fontSize: 14,
                         color: Colors.white,

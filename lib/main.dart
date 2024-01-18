@@ -1,9 +1,5 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:snapixel/Demo/dmeo.dart';
-import 'package:snapixel/Demo/share.dart';
-import 'package:snapixel/Pages/Trends.dart';
-import 'package:snapixel/Pages/UserProfile.dart';
 import 'package:snapixel/Pages/screens/MainIntroScreen.dart';
 
 void main() {

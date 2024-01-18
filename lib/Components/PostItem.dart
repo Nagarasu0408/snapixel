@@ -60,7 +60,7 @@ class _PostItemState extends State<Post> {
                       Container(
                         height:50,
                         width: 50,
-                        decoration: pin?BoxDecoration(color: Colors.blue.withOpacity(.1),shape: BoxShape.circle):BoxDecoration(color: Colors.white12,shape: BoxShape.circle),),
+                        decoration: pin?BoxDecoration(color: Colors.blue.withOpacity(.1),shape: BoxShape.circle):const BoxDecoration(color: Colors.white12,shape: BoxShape.circle),),
                       GestureDetector(
                         onTap: pinUser,
                         child: Transform.rotate(
