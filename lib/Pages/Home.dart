@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:snapixel/Components/Custom_SearchBar.dart';
-import 'package:snapixel/Pages/UserProfile.dart';
 
 import '../Components/PostItem.dart';
 
