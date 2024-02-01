@@ -5,6 +5,7 @@ import 'package:snapixel/Pages/screens/MainIntroScreen.dart';
 void main() {
   runApp((const MaterialApp(
     home: Qpixel(),
+    debugShowCheckedModeBanner: false,
   )));
 }
 

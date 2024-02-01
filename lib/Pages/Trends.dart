@@ -501,7 +501,7 @@ class _TrendingState extends State<Trending> {
                 fontSize: 18,
               ),
             ),
-            SizedBox(width: 5),
+            const SizedBox(width: 5),
             Container(
               padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 12),
               decoration: BoxDecoration(
